@@ -1,4 +1,4 @@
-name: C/C++ Linter
+name: C/C++ Linter (24.04)
 description: Linting C/C++ code with clang-tidy or clang-format to give feedback as comments, PR reviews, and more.
 author: cpp-linter
 branding:
@@ -44,7 +44,7 @@ inputs:
       - Set this option to a blank string (`''`) to use the platform's default installed version.
       - This value can also be a path to where the clang tools are installed (if using a custom install location).
     required: false
-    default: 16
+    default: 18
   verbosity:
     description: |
       This controls the action's verbosity in the workflow's logs.
@@ -234,7 +234,7 @@ runs:
       id: setup-python
       with:
         # use python version shipped with latest Ubuntu LTS
-        python-version: '3.10'
+        python-version: '3.12'
         update-environment: false
 
     - name: Install Linux clang dependencies
